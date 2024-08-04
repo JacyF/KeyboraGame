@@ -23,6 +23,7 @@ document.addEventListener("keydown", event => {
             myBox.textContent = `😱`;
             myBox.style.backgroundColor = `red`;
             qBtn.style.backgroundColor = `red`;
+            document.body.style.backgroundColor = "red"
 
             break ;
         case "p":
@@ -30,11 +31,13 @@ document.addEventListener("keydown", event => {
             myBox.textContent =`🤪`;
             myBox.style.backgroundColor =`yellow`
             pBtn.style.backgroundColor =`yellow`;
+            document.body.style.backgroundColor = "yellow";
             
             break;
         case "l" :
             myBox.classList.replace("SpinViral", "SpinViral-disabled");
             lBtn.style.backgroundColor =`green`;
+            document.body.style.backgroundColor = "green";
             break;
     }
 
@@ -42,22 +45,30 @@ document.addEventListener("keydown", event => {
         event.preventDefault();
 
         switch(event.key) {
+            
             case "ArrowUp" :
                 y -= moveAmount;
                 UpArrowBtn.style.backgroundColor =`pink`;
+                document.body.style.backgroundColor = "pink";
                 break;
             case "ArrowDown" :
                 y += moveAmount;
                 DownArrowBtn.style.backgroundColor =`pink`;
+                document.body.style.backgroundColor = "pink";
+
                 break;
 
             case "ArrowLeft" :
                 x -= moveAmount;
                 leftArrowBtn.style.backgroundColor =`pink`;
+                document.body.style.backgroundColor = "pink";
+
                 break;
             case "ArrowRight" :
                 x += moveAmount;
                 RightArrowBtn.style.backgroundColor =`pink`;
+                document.body.style.backgroundColor = "pink";
+
                 break;
         }
 
@@ -80,5 +91,6 @@ document.addEventListener("keyup", event => {
     DownArrowBtn.style.backgroundColor =`transparent`;
     leftArrowBtn.style.backgroundColor =`transparent`;
     RightArrowBtn.style.backgroundColor =`transparent`;
+    document.body.style.backgroundColor = "white";
 })
 
